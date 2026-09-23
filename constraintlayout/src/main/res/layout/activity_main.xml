@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvLab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvResponsive"
+        app:layout_constraintVertical_weight="1"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="Lab 1"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResponsive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/colorRow"
+        app:layout_constraintVertical_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="Responsive Layout 1"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLab" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvApplication"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResponsive">
+
+        <TextView
+            android:id="@+id/tvThis"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="This"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@id/tvIs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/tvIs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#0000FF"
+            android:gravity="center"
+            android:text="is"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@id/tvMy"
+            app:layout_constraintStart_toEndOf="@id/tvThis"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/tvMy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#673AB7"
+            android:gravity="center"
+            android:text="my"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@id/tvFirst"
+            app:layout_constraintStart_toEndOf="@id/tvIs"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF00"
+            android:gravity="center"
+            android:text="first"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvApplication"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonRow"
+        app:layout_constraintVertical_weight="2"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="Android Application"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colorRow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvApplication">
+
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Change"
+            app:layout_constraintEnd_toStartOf="@id/btnCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnChange"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
